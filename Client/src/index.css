@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .ql-editor {
+    @apply text-xl sm:text-2xl 
+}
+.mce-content-body {
+    @apply text-2xl
+}
+
+th, td{
+    @apply dark:text-white;
+}
+
+.post-description h1 {
+    @apply md:text-4xl sm:text-2xl
+}
+.post-description h2 {
+    @apply md:text-3xl sm:text-2xl
+}
+.post-description h3 {
+    @apply md:text-2xl sm:text-2xl my-5
+}
+
+.post-description p, .post-description div {
+    @apply md:text-xl sm:text-xl my-5
+}
+
+.post-description a {
+    @apply dark:text-teal-400 text-blue-400 underline
+} */
+
+/* .authBack {
+    position: relative;
+}
+.authBack img{
+    position: absolute;
+    z-index: -1;
+    filter: brightness(60%);
+} */
