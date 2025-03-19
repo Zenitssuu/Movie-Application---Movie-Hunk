@@ -10,25 +10,26 @@ import { useSelector, useDispatch } from "react-redux";
 import { setMovies as setMoviesMem } from "../../store/MovieSlices.js";
 import axios from "axios";
 import parse from "html-react-parser";
+import Loading from "../Loading.jsx";
 
 export default function SwiperComponent({ className = "" }) {
+  
   const [movies, setMovies] = useState([]);
-  const dispatch = useDispatch();
-
-  const findAllMovies = async () => {
-    const allMovies = await axios.get("/movies/all-movies");
-    console.log("Movies : ", allMovies.data);
-    dispatch(setMoviesMem(allMovies.data));
-    setMovies(allMovies.data);
-  };
+  // const dispatch = useDispatch();
+  const savedMovies = useSelector((state) => state.movieReducer.movies);
+  
+  // const findAllMovies = async () => {
+  //   setMovies(savedMovies);
+  // };
 
   useEffect(() => {
-    findAllMovies();
+    setMovies(savedMovies);
+    // findAllMovies();
   }, []);
 
   return (
-    <>
-      {movies.length > 0 && (
+    <div className="relative mt-20 md:min-h-[300px] lg:min-h-[500px]">
+      {movies.length > 0 ? (
         <div className="mt-16">
           <Swiper
             slidesPerView={1}
@@ -81,7 +82,9 @@ export default function SwiperComponent({ className = "" }) {
             ))}
           </Swiper>
         </div>
+      ) : (
+        <Loading className="absolute w-full h-full"/>
       )}
-    </>
+    </div>
   );
 }

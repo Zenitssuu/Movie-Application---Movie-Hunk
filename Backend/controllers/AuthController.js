@@ -40,7 +40,6 @@ async function sendEmail(email) {
     }
 }
 
-
 export async function signIn(req, res, next) {
     const { email, password } = req.body;
     try {
